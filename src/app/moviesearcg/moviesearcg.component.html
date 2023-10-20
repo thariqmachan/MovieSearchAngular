@@ -1,0 +1,38 @@
+
+<div class="container w-25" style="margin-top: 11%;">
+    
+    
+    <form [formGroup]="movieform" action="#" class="ps-5 pe-5">
+    <input type="text" name="enter movie name " formControlName="title"  class="form-control text-center " id="movieCheck" placeholder="enter movie name" style=" text-indent: 10px;">
+    <button class="btn btn-danger mt-4 " type="button" (click)="search()" style="margin-left: 1px;padding-left: 30px; padding-right: 30px;">Search movie</button> 
+    </form>
+    <div id="result"  class="mb-4" *ngIf="result">
+        <h1 class="text-center">RESULT</h1>
+        <img src="{{poster}}" alt="">
+        <table>
+            <td>
+                <tr>title</tr>
+
+                <tr>Release date</tr>
+
+                <tr>Actors</tr>
+                <tr>plot</tr>
+                <tr>Rating</tr>
+            </td>
+
+
+            <td>
+                <tr>{{name}}</tr>
+                <tr>{{release}}</tr>
+                <tr>{{actors}}</tr>
+                <tr>{{plot}}</tr>
+
+
+                <tr>{{rating}}</tr> <i class="fa-solid fa-star fa-sm" style="color: yellow;"></i>
+            </td>
+        </table>
+
+
+    </div>
+</div>
+
